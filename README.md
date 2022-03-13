@@ -15,12 +15,23 @@ A Colorado Borad of Elections employee has given you the following tasks to comp
 ## Summary
 The analysis of the election show that:
 - There were 369,711 votes cast in the election.
-- The resuts were as follow:
+- The resuts for candidates were as follow:
   - Charles Casper Stockham: 23.0% (85,213)
   - Diana DeGette: 73.8% (272,892)
   - Raymon Anthony Doane: 3.1% (11,606)
 - The winner was Diana DeGette with 73.8% (272,892) votes.
 
-## Challenge Overview
+The results for counties were as follow:
+  - Jefferson: 10.5% (38,855)
+  - Denver: 82.8% (306,055)
+  - Arapahoe: 6.7% (24,801)
+ -The winning county was Denver with 82.8% (306,055) votes. 
 
 ## Challenge Summary
+Provided files could be used for the next elections. Script should be put in the folder with two subfolders with following names "Resources" and "analysis". Then changing the csv file name (in the example code provided as "new_results.csv") in line 9  to file name with new results shoudl enable to rerun the analysis for new data.
+line 9:  file_to_load = os.path.join("Resources", "new_results.csv").
+The the column number in new_results.csv file has different order than original file please numbers in change lines 48 and 51.
+line 48: candidate_name = row[2]
+line 51: county_name = row[1]
+For line 48 provide the number of column that contains candidate name and subtract one eg. if candidate name is in second column provide 1.
+For line 51 provide the number of column that contains county name and subtract one eg. if county name is in first column provide 0.
